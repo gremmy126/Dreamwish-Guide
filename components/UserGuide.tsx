@@ -74,12 +74,6 @@ export const UserGuide: React.FC = () => {
                 ))}
             </div>
         </div>
-
-        <div className="mt-16 text-center">
-            <div className="inline-block bg-white rounded-full px-6 py-3 shadow-sm border border-gray-200 text-gray-600 text-sm">
-                💡 입점 승인 후 초기 세팅은 드림위시 운영팀에서 <span className="font-bold text-dream-blue">무료로 지원</span>해드립니다.
-            </div>
-        </div>
       </div>
     </section>
   );

@@ -4,8 +4,8 @@ import { Coins, Tv, Smartphone, MapPin } from 'lucide-react';
 
 const features = [
   {
-    title: "구독 없고 낮은 수수료율",
-    desc: "소상공인 분들을 위해 구독료를 없애고 수수료율을 대폭 낮췄습니다. 부담 없이 시작하세요.",
+    title: "낮은 수수료율",
+    desc: "소상공인 분들을 위해 수수료율을 대폭 낮췄습니다. 부담 없이 시작하세요.",
     icon: <Coins className="w-10 h-10 text-white" />,
     bg: "bg-blue-500"
   },

@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms, onOpenPrivacy }) =>
            <div className="flex flex-col gap-4 md:items-end justify-center">
               <div className="flex items-center gap-2">
                  <Phone size={18} />
-                 <span>Contact. KIMDONGHYEON</span>
+                 <span>Contact. 010-9110-8716</span>
               </div>
               <div className="flex items-center gap-2">
                  <Mail size={18} />
