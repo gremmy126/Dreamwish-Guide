@@ -1,0 +1,51 @@
+# Netlify Configuration
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Build output directory (Vite default)
+  publish = "dist"
+  # Build command
+  command = "npm run build"
+
+# Force HTTPS - Redirect all HTTP traffic to HTTPS
+[[redirects]]
+  from = "http://dreamwish.shop/*"
+  to = "https://dreamwish.shop/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.dreamwish.shop/*"
+  to = "https://dreamwish.shop/:splat"
+  status = 301
+  force = true
+
+# Redirect www to non-www (optional, for consistency)
+[[redirects]]
+  from = "https://www.dreamwish.shop/*"
+  to = "https://dreamwish.shop/:splat"
+  status = 301
+  force = true
+
+# Security Headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Force HTTPS connections
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # Prevent clickjacking attacks
+    X-Frame-Options = "DENY"
+    # Prevent MIME type sniffing
+    X-Content-Type-Options = "nosniff"
+    # Enable XSS protection
+    X-XSS-Protection = "1; mode=block"
+    # Referrer policy for privacy
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Content Security Policy - Upgrade insecure requests
+    Content-Security-Policy = "upgrade-insecure-requests"
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
